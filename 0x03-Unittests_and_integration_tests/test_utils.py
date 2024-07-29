@@ -28,7 +28,8 @@ class TestAccessNestedMap(unittest.TestCase):
         ({}, ("a",), KeyError),
         ({"a": 1}, ("a", "b"), KeyError),
     ])
-    def test_access_nested_map_exception(self, nested_map, path, expected_exception):
+    def test_access_nested_map_exception(
+            self, nested_map, path, expected_exception):
         """
         Test that accessing a non-existent key raises a KeyError
         """
@@ -74,7 +75,7 @@ class TestMemoize(unittest.TestCase):
         """
         Test the memoize decorator
         """
-        mock_a_method.return_value=lambda: 42
+        mock_a_method.return_value = lambda: 42
         test_instance = TestClass()
         result1 = test_instance.a_property()
         result2 = test_instance.a_property()
