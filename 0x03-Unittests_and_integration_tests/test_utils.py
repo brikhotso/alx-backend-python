@@ -61,10 +61,12 @@ class TestGetJson(unittest.TestCase):
 class TestClass:
     """Define TestClass"""
     def a_method(self):
+        """method"""
         return 42
 
     @memoize
     def a_property(self):
+        """property"""
         return self.a_method()
 
 
